@@ -1,0 +1,52 @@
+{
+	"pages": [{
+		"path": "pages/index/index",
+		"style": {
+			"navigationBarTitleText": "首页",
+			"enablePullDownRefresh": true
+		}
+	}    ,{
+            "path" : "pages/page2/page2",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+			"path": "pages/talk/talk",
+			"style":{
+				"navigationBarTitleText": "文字聊天",
+				"enablePullDownRefresh":true
+			}
+		}
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "手语识别",
+		"navigationBarBackgroundColor": "white",
+		"backgroundColor": "#F8F8F8",
+		"app-plus": {
+			"background": "#efeff4"
+		}
+	}
+	,"tabBar": {
+		"color": "#7A7E83",
+		"selectedColor": "#1abc9c",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/index/index",
+			"iconPath": "static/c1.png",
+			"selectedIconPath": "static/c1.png",
+			"text": "手语识别"
+		},
+		{
+			"pagePath": "pages/page2/page2",
+			"iconPath": "static/c2.png",
+			"selectedIconPath": "static/c2.png",
+			"text": "page2"
+		}]
+	}
+}
