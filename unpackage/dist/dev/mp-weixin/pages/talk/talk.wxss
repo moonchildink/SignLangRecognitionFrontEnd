@@ -1,0 +1,308 @@
+/* 水平间距 */
+/* 水平间距 */
+/*
+ *  uni-app 全局样式表
+ *  作者:helang
+ *  邮箱:helang.love@qq.com
+*/
+/* 根元素样式 设置页面背景、字体大小、字体颜色，字符间距、长单词换行 */
+page {
+  background-color: #f3f3f3;
+  font-size: 28rpx;
+  box-sizing: border-box;
+  color: #333;
+  letter-spacing: 0;
+  word-wrap: break-word;
+}
+/* 设置常用元素尺寸规则 */
+view, textarea, input, label, form, button, image {
+  box-sizing: border-box;
+}
+/* 按钮样式处理 */
+button {
+  font-size: 28rpx;
+}
+/* 取消按钮默认的边框线效果 */
+button:after {
+  border: none;
+}
+/* 设置图片默认样式，取消默认尺寸 */
+image {
+  display: block;
+  height: auto;
+  width: auto;
+}
+/* 输入框默认字体大小 */
+textarea, input {
+  font-size: 28rpx;
+}
+/* 列式弹性盒子 */
+.flex-col {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+/* 行式弹性盒子 */
+.flex-row {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+}
+/* 弹性盒子弹性容器 */
+.flex-col > view.flex-grow {
+  width: 0;
+  flex-grow: 1;
+}
+.flex-row > view.flex-grow {
+  height: 0;
+  flex-grow: 1;
+}
+/* 弹性盒子允许换行 */
+.flex-col.flex-wrap {
+  flex-wrap: wrap;
+}
+/* 弹性盒子居中对齐 */
+.flex-col.flex-center, .flex-row.flex-center {
+  justify-content: center;
+}
+/* 列式弹性盒子两端对齐 */
+.flex-col.flex-space {
+  justify-content: space-between;
+}
+/* 弹性盒子快速分栏 ,这里非常郁闷 uniapp 居然不支持 * 选择器 */
+.flex-col.flex-col-2 > view {
+  width: 50%;
+}
+.flex-col.flex-col-3 > view {
+  width: 33.33333%;
+}
+.flex-col.flex-col-4 > view {
+  width: 25%;
+}
+.flex-col.flex-col-5 > view {
+  width: 20%;
+}
+.flex-col.flex-col-6 > view {
+  width: 16.66666%;
+}
+/* 字体颜色 */
+.color-333 {
+  color: #333;
+}
+.color-666 {
+  color: #666;
+}
+.color-999 {
+  color: #999;
+}
+.color-ccc {
+  color: #ccc;
+}
+.color-fff {
+  color: #fff;
+}
+.color-6dc {
+  color: #6dca6d;
+}
+.color-d51 {
+  color: #d51917;
+}
+.color-09f {
+  color: #0099ff;
+}
+/* 背景色*/
+.bg-fff {
+  background-color: #ffffff;
+}
+/* 字体大小 */
+.size-10 {
+  font-size: 20rpx;
+}
+.size-12 {
+  font-size: 24rpx;
+}
+.size-14 {
+  font-size: 28rpx;
+}
+.size-16 {
+  font-size: 32rpx;
+}
+.size-18 {
+  font-size: 36rpx;
+}
+.size-20 {
+  font-size: 40rpx;
+}
+/* 字体加粗 */
+.font-b {
+  font-weight: bold;
+}
+/* 对齐方式 */
+.align-c {
+  text-align: center;
+}
+.align-l {
+  text-align: left;
+}
+.align-r {
+  text-align: right;
+}
+/* 遮罩 */
+.shade {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 100;
+}
+/* 弹窗 */
+.shade-box {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: 101;
+  min-width: 200rpx;
+  min-height: 200rpx;
+}
+page {
+  background-color: #F3F3F3;
+  font-size: 28rpx;
+}
+/* 加载数据提示 */
+.tips {
+  position: fixed;
+  left: 0;
+  top: var(--window-top);
+  width: 100%;
+  z-index: 9;
+  background-color: rgba(0, 0, 0, 0.15);
+  height: 72rpx;
+  line-height: 72rpx;
+  transform: translateY(-80rpx);
+  transition: transform 0.3s ease-in-out 0s;
+}
+.tips.show {
+  transform: translateY(0);
+}
+.box-1 {
+  width: 100%;
+  height: auto;
+  padding-bottom: 100rpx;
+  box-sizing: content-box;
+  /* 兼容iPhoneX */
+  margin-bottom: 0;
+  margin-bottom: constant(safe-area-inset-bottom);
+  margin-bottom: env(safe-area-inset-bottom);
+}
+.box-2 {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+  height: auto;
+  z-index: 2;
+  border-top: #e5e5e5 solid 1px;
+  box-sizing: content-box;
+  background-color: #F3F3F3;
+  /* 兼容iPhoneX */
+  padding-bottom: 0;
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.box-2 > view {
+  padding: 0 20rpx;
+  height: 100rpx;
+}
+.box-2 .content {
+  background-color: #fff;
+  height: 64rpx;
+  padding: 0 20rpx;
+  border-radius: 32rpx;
+  font-size: 28rpx;
+}
+.box-2 .send {
+  background-color: #42b983;
+  color: #fff;
+  height: 64rpx;
+  margin-left: 20rpx;
+  border-radius: 32rpx;
+  padding: 0;
+  width: 120rpx;
+  line-height: 62rpx;
+}
+.box-2 .send:active {
+  background-color: #5fc496;
+}
+.talk-list {
+  padding-bottom: 20rpx;
+  /* 消息项，基础类 */
+}
+.talk-list .item {
+  padding: 20rpx 20rpx 0 20rpx;
+  align-items: flex-start;
+  align-content: flex-start;
+  color: #333;
+  /* 收到的消息 */
+  /* 发出的消息 */
+}
+.talk-list .item .pic {
+  width: 92rpx;
+  height: 92rpx;
+  border-radius: 50%;
+  border: #fff solid 1px;
+}
+.talk-list .item .content {
+  padding: 20rpx;
+  border-radius: 4px;
+  max-width: 500rpx;
+  word-break: break-all;
+  line-height: 52rpx;
+  position: relative;
+}
+.talk-list .item.pull .content {
+  margin-left: 32rpx;
+  background-color: #fff;
+}
+.talk-list .item.pull .content::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 16rpx solid transparent;
+  border-bottom: 16rpx solid transparent;
+  border-right: 20rpx solid #fff;
+  position: absolute;
+  top: 30rpx;
+  left: -18rpx;
+}
+.talk-list .item.push {
+  /* 主轴为水平方向，起点在右端。使不修改DOM结构，也能改变元素排列顺序 */
+  flex-direction: row-reverse;
+}
+.talk-list .item.push .content {
+  margin-right: 32rpx;
+  background-color: #a0e959;
+}
+.talk-list .item.push .content::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 16rpx solid transparent;
+  border-bottom: 16rpx solid transparent;
+  border-left: 20rpx solid #a0e959;
+  position: absolute;
+  top: 30rpx;
+  right: -18rpx;
+}

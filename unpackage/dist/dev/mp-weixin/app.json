@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/page2/page2",
+    "pages/talk/talk",
+    "pages/camera/camera"
+  ],
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "手语识别",
+    "navigationBarBackgroundColor": "#ffffff",
+    "backgroundColor": "#F8F8F8"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#1abc9c",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/c1.png",
+        "selectedIconPath": "static/c1.png",
+        "text": "手语识别"
+      },
+      {
+        "pagePath": "pages/page2/page2",
+        "iconPath": "static/c2.png",
+        "selectedIconPath": "static/c2.png",
+        "text": "page2"
+      }
+    ]
+  },
+  "usingComponents": {}
+}

@@ -1,0 +1,1 @@
+<view class="area"><view class="btnBar"><button type="default" class="btnStyle" id="btnHelp" bindtap="{{a}}">帮助</button><button type="default" class="btnStyle" id="btnRecognition" bindtap="{{b}}">手语</button><button type="default" class="btnStyle" id="btnKeyboard" bindtap="{{c}}">打字</button></view></view>
